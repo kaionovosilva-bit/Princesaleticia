@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu de Biomas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #a8edea, #fed6e3);
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #4b2e2e;
+      margin-bottom: 30px;
+    }
+
+    .bioma-btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 15px 25px;
+      background-color: #d6336c;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 18px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .bioma-btn:hover {
+      background-color: #b02553;
+    }
+  </style>
+</head>
+<body>
+  <h1>🌍 Escolha um bioma 🌍</h1>
+
+  <a href="cerejeira.html" class="bioma-btn">🌸 Bioma de Cerejeira</a>
+  <a href="floresta.html" class="bioma-btn">🌲 Floresta</a>
+  <a href="deserto.html" class="bioma-btn">🏜️ Deserto</a>
+  <a href="oceano.html" class="bioma-btn">🌊 Oceano</a>
+
+  <script>
+    // Bloqueia acesso se não estiver logado
+    if (localStorage.getItem("logado") !== "sim") {
+      window.location.href = "login.html";
+    }
+  </script>
+</body>
+</html>

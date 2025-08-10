@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cherry Blossom Love – Capítulo 1</title>
+  <style>
+    body {
+      background-color: #fff0f5;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #4b2e2e;
+      text-align: center;
+      padding: 30px;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #d6336c;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.2em;
+      max-width: 600px;
+      margin: 0 auto 30px;
+      line-height: 1.6;
+    }
+
+    .imagem {
+      margin-top: 20px;
+    }
+
+    .imagem img {
+      width: 90%;
+      max-width: 500px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .tulipa {
+      position: absolute;
+      top: 50%;
+      width: 140px;
+      transform: translateY(-50%);
+      z-index: 0;
+      opacity: 0.8;
+    }
+
+    .tulipa.esquerda {
+      left: 10px;
+    }
+
+    .tulipa.direita {
+      right: 10px;
+    }
+
+    /* 🌐 Responsividade para celulares */
+    @media (max-width: 768px) {
+      .tulipa {
+        display: none; /* Esconde as tulipas em telas pequenas */
+      }
+
+      h1 {
+        font-size: 1.8em;
+      }
+
+      p {
+        font-size: 1em;
+        padding: 0 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Tulipas nas laterais (somem em celular) -->
+  <img src="Tulipa.png" alt="Tulipa Esquerda" class="tulipa esquerda">
+  <img src="Tulipa.png" alt="Tulipa Direita" class="tulipa direita">
+
+  <h1>🌸 Cherry Blossom Love – Capítulo 1: O Começo Rosa 🌸</h1>
+  <p>
+    Na calma do pôr do sol, entre pétalas flutuantes e um céu cor de sonho,
+    foi nesse bioma de cerejeira que tiramos nossa primeira foto juntos no mundo do Minecraft.
+  </p>
+  <p>
+    Talvez tenha sido só um clique no jogo… mas pra mim, foi como se o tempo parasse.
+    Era só a gente dois. Ali, no meio de pixels e folhas rosas, nasceu uma lembrança que nunca vou querer esquecer.
+  </p>
+  <p>
+    Porque mesmo num mundo feito de blocos… o que construo com você é real.
+  </p>
+  <div class="imagem">
+    <img src="imagem-bioma-cerejeira.jpg" alt="Foto no bioma de cerejeira no pôr do sol">
+  </div>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Cherry Blossom Love</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      position: relative;
+    }
+
+    /* Imagens laterais (PC) */
+    .side-image {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      max-width: 280px;
+      text-align: center;
+    }
+
+    .side-image img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .caption {
+      margin-top: 8px;
+      font-size: 1em;
+      color: #444;
+      font-style: italic;
+    }
+
+    .left {
+      left: 30px;
+    }
+
+    .right {
+      right: 30px;
+    }
+
+    /* Formulário central */
+    .login-container {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+      text-align: center;
+      width: 300px;
+      z-index: 1;
+    }
+
+    h2 {
+      margin-bottom: 15px;
+      color: #d6336c;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #d6336c;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #b02553;
+    }
+
+    .error {
+      color: red;
+      font-size: 0.9em;
+      margin-top: 5px;
+    }
+
+    /* Versão celular */
+    @media (max-width: 900px) {
+      body {
+        flex-direction: column;
+        padding: 20px;
+      }
+
+      .side-image {
+        position: static;
+        transform: none;
+        max-width: 100%;
+        margin: 10px 0;
+      }
+
+      .login-container {
+        width: 100%;
+        max-width: 350px;
+        order: 2; /* Login no meio */
+      }
+
+      .left {
+        order: 1; /* Imagem P&B em cima */
+      }
+
+      .right {
+        order: 3; /* Imagem colorida embaixo */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Imagem preto e branco à esquerda (PC) ou em cima (celular) -->
+  <div class="side-image left">
+    <img src="olhos-pb.png" alt="Antes">
+    <div class="caption">Antes de você, minha vida era como um mundo sem cor...</div>
+  </div>
+
+  <!-- Formulário central -->
+  <div class="login-container">
+    <h2>🌸 Bem-vinda 🌸</h2>
+    <input type="text" id="username" placeholder="Usuário">
+    <input type="password" id="password" placeholder="Senha">
+    <button onclick="login()">Entrar</button>
+    <p class="error" id="error"></p>
+  </div>
+
+  <!-- Imagem colorida à direita (PC) ou embaixo (celular) -->
+  <div class="side-image right">
+    <img src="olhos-colorido.png" alt="Depois">
+    <div class="caption">Mas então você chegou... e tudo se iluminou.</div>
+  </div>
+
+  <script>
+    function login() {
+      const user = document.getElementById("username").value;
+      const pass = document.getElementById("password").value;
+      const error = document.getElementById("error");
+
+      if (user === "Princesa Leticia" && pass === "teamokaio") {
+        localStorage.setItem("logado", "sim");
+        window.location.href = "menu.html";
+      } else {
+        error.textContent = "Usuário ou senha incorretos!";
+      }
+    }
+  </script>
+
+</body>
+</html>
+
+
+
